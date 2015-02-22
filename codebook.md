@@ -7,25 +7,25 @@ Raw data: The study provides different data sets. The X_test data set is a 2947 
 Processed data: 
 Variables | Class
 --------- | -----
-"activity" | character
-"char_vec" | numeric
-"column_names" | character
-"data_set" | tbl_df
-"data_set_mean_std" | tbl_df
-"data_set_temp" | tbl_df
-"date_downloaded" | character
-"fileUrl" | character
-"mean_col" | integer
-"std_col" | integer
-"test_subjects" | integer
-"tidy_data_set" | tbl_df
-"train_subjects" | integer
-"x_test_data" | tbl_df
-"x_train_data" | tbl_df
-"y_test_data" | integer
-"y_test_data_temp" | character
-"y_train_data" | integer
-"y_train_data_temp" |character
+activity | character
+char_vec | numeric
+column_names | character
+data_set | tbl_df
+data_set_mean_std | tbl_df
+data_set_temp | tbl_df
+date_downloaded | character
+fileUrl | character
+mean_col | integer
+std_col | integer
+test_subjects | integer
+tidy_data_set | tbl_df
+train_subjects | integer
+x_test_data | tbl_df
+x_train_data | tbl_df
+y_test_data | integer
+y_test_data_temp | character
+y_train_data | integer
+y_train_data_temp |character
 
 Features was read as a data frame whose second column was a character vector. The second column was saved as column_names. column_names was subsetted into mean_col and std_col in a way that mean_col contained the indexes of the measurements from the X data sets that were pure mean measurements (excluding meanFreq) and std_col contained the indexes of the measurements that were standard deviation measurements. Both mean_col and std_col were put together to form the char_vec which is then sorted to provide the indexes of the selected columns as they would appear in the X data sets left to right.
 The X_test data set is read into the variable x_test data which is later turned into a data frame tbl. The X_train data was read into the x_train_data variable which was also turned into a tbl_df class. The Y_test and Y_train data sets were read into the y_test_data and y_train data variables respectively. The vraibles were later turned into character vectors y_test_data_temp and y_train_data_temp by matching the numeric ID from the Y data sets to the corresponding activity labels in the variable activity. The latter was formed by picking the second column of activty_labels data set. The first column in that activity_labels data set consits of numeric values (1:6) with matching characer values in the second column. The same values in the first column appeared in the Y data sets thus making it easy to match an activity with it's numeric ID.
